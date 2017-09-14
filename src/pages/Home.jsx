@@ -16,7 +16,6 @@ class Home extends Component {
 					strength={300}
 					bgImage= {img1}
 					bgWidth="100%"
-					bgHeight="100vh"
 				>
 					<h2 className="GIStatsParHeader">Gridiron Stats</h2>
 				</Parallax>
@@ -24,7 +23,6 @@ class Home extends Component {
 					strength={300}
 					bgImage= {img2}
 					bgWidth="100%"
-					bgHeight="100vh"
 				>
 					<h2>Compare the Teams</h2>
 				</Parallax>
@@ -32,7 +30,6 @@ class Home extends Component {
 					strength={300}
 					bgImage= {img3}
 					bgWidth="100%"
-					bgHeight="100vh"
 				>
 					<h2>Donate</h2>
 				</Parallax>
