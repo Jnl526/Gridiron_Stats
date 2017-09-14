@@ -3,30 +3,13 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Grid, Divider, Image } from "semantic-ui-react";
 import "./Foundations.scss";
-
-const srcMADD =
-"src/assets/images/madd.png";
-
-
-const srcNtlHgh =
-"src/assets/images/naturalHigh.png";
-
-const srcASPCA =
-"src/assets/images/aspca.svg";
-
-
-const srcSafeHorizon =
-"src/assets/images/safeHorizon.png";
-
-const srcWings =
-"src/assets/images/wings.png";
-
-const srcRAINN =
-"src/assets/images/rainn.svg";
-
-
-const srcPrevent =
-"src/assets/images/prevent.png";
+import srcMADD from "assets/images/madd.png";
+import srcNtlHgh from "assets/images/naturalHigh.png";
+import srcASPCA from "assets/images/aspca.svg";
+import srcSafeHorizon from "assets/images/safeHorizon.png";
+import srcWings from "assets/images/wings.png";
+import srcRAINN from "assets/images/rainn.svg";
+import srcPrevent from "assets/images/prevent.png";
 
 
 

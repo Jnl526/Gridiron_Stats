@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { retrieveTeams } from "actions/teams.js";
 import Loader from "components/Loader";
 import TeamsResult from "components/teamsResult";
-import  nflTeamsList  from "json/dropdown.json";
+import nflTeamsList from "json/dropdown.json";
 
 
 class Teams extends Component {
