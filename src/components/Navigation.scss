@@ -38,19 +38,19 @@
 }
 
 .Nav-Link-Home {
-font-size: 20px;
+font-size: 25px;
 font-family: 'PROMESH-TwoFast', Fallback, sans-serif;
 padding: 0 4px;
 color: rgb(222, 214, 156);
 text-decoration: none;
 
-	&.is-active,
-	&:hover {
-		color: #0000ee;
-		;
-	}
+&.is-active,
+&:hover {
+	color: rgb(20,41,83);
+	;
+}
 
 &.is-active {
-	text-decoration: underline;
+	text-decoration: none;
 	}
-}
+	}

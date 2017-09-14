@@ -99,15 +99,26 @@ class TeamsResult extends Component {
 										fontSize: 20,
 									}
 								},
+								showAllTooltips: true,
 								scales: {
-											 yAxes: [{
+											 xAxes: [{
 													 ticks: {
 															 fontSize: 20,
 															 min: 0,
-                                    beginAtZero: true,
-                                    stepSize: 1
+	                              beginAtZero: true,
+	                              stepSize: 1,
+																autoSkip: false
 													 }
-											 }]
+											 }],
+											 yAxes: [{
+													ticks: {
+															fontSize: 20,
+															min: 0,
+															 beginAtZero: true,
+															 stepSize: 1,
+															 autoSkip: false
+													}
+											}]
 									 },
 									 responsive: true,
 		        			maintainAspectRatio: true,

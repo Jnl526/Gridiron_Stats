@@ -9,9 +9,6 @@ import { connect } from "react-redux";
 class Navigation extends Component {
 	render() {
 		const links = [{
-			to: "/",
-			text: "GRIDIRON STATS",
-		},	{
 			to: "/teams",
 			text: "Compare Teams",
 		}, {
@@ -21,11 +18,11 @@ class Navigation extends Component {
 
 
 		return (
-			< Menu size='large' className="Navigation" >
+			< Menu size='massive' className="Navigation" >
 				< Menu.Menu>
 					<Menu.Item position="left">
 						<Link to="/" className="Nav-Link-Home">
-							GRIDIRON STATS
+							G.I. STATS
 						</Link>
 					</Menu.Item>
 				</Menu.Menu>
