@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress --config=webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --progress --config=webpack.config.js",
-    "heroku": "superstatic dist",
+    "heroku": "superstatic dist --port=$PORT",
     "postinstall": "if [ $NPM_CONFIG_PRODUCTION ]; then npm run build; fi;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
