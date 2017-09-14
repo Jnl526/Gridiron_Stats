@@ -88,6 +88,7 @@ class TeamsResult extends Component {
 				</Grid.Row>
 				<Grid.Row >
 					<Grid.Column className="team1Column">
+						<h5 className="Stats-Years">***Based on NFL ARREST Statistics from the year 2000***</h5>
 						<Bar
 							data = { dataBothTeams }
 							width={700}
