@@ -15,6 +15,10 @@ Once you start building things with this template, you may want to remove the
 `.placeholder` files in `src/assets/fonts`, `src/assets/images`, and
 `src/components` folders. They were added just to check in those directories.
 
+## Deployment
+
+* http://gridironstatistics.herokuapp.com
+
 ## React / Webpack Template
 
 This template allows you to very quickly spin up a React application that's

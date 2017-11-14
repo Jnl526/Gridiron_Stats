@@ -1,16 +1,27 @@
 
 
+@font-face {
+  font-family: 'PROMESH Two';
+  src: url('/fonts/PROMESH-TwoFast;.ttf'),/* IE9 Compat Modes */
+       url('/fonts/PROMESH-TwoFast.ttf')  format('truetype')
+}
+
+.Menu {
+	background-color: #527B99;
+}
+
 .Nav {
 	text-align: center;
 	padding: 20px;
 	margin-bottom: 20px;
-	background: rgb(232,239,213);
+	background-color: #527B99;
 	border-bottom: 1px solid #000;
-	z-index: 4;
-	// position: absolute;
+	height: 200px;
 	width: 100%;
 
 	&-link {
+		font-size: 20px;
+		font-family: 'PROMESH-TwoFast', Fallback, sans-serif;
 		padding: 0 40px;
 		padding-right: 20px;
 		text-decoration: none;
@@ -28,17 +39,18 @@
 }
 
 .Nav-Link-Home {
+font-size: 25px;
+font-family: 'PROMESH-TwoFast', Fallback, sans-serif;
 padding: 0 4px;
 color: rgb(222, 214, 156);
 text-decoration: none;
 
-	&.is-active,
-	&:hover {
-		color: #0000ee;
-		;
-	}
+&.is-active,
+&:hover {
+	color: rgb(20,41,83);
+}
 
 &.is-active {
-	text-decoration: underline;
+	text-decoration: none;
 	}
 }
