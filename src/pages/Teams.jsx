@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { retrieveTeams } from "actions/teams.js";
 import Loader from "components/Loader";
 import TeamsResult from "components/teamsResult";
-import  nflTeamsList  from "json/dropdown.json";
+import nflTeamsList from "json/dropdown.json";
 
 
 class Teams extends Component {
@@ -65,15 +65,18 @@ class Teams extends Component {
 								name="team1"
 								title= "team1Title"
 								imageSource="team1ImageSrc"
-								search selection options={ options }/>
+								search selection options={ options }
+							required/>
 							<Form.Select
+								size= 'mini'
 								width= {4}
 								onChange = {this._handleChange}
 								placeholder=" Select Your Team"
 								name="team2"
 								title= "team2Title"
 								imageSource="team2ImageSrc"
-								search selection options={ options }/>
+								search selection options={ options }
+								required/>
 						</Form.Group>
 						<div className="submit-button-div">
 							<Button size="massive" type="submit">Submit</Button>

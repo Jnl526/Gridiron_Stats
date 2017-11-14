@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Grid, Divider } from "semantic-ui-react";
-import { Bar } from "react-chartjs-2";
+import { Bar, Radar, Pie, Polar, Line, Chart } from "react-chartjs-2";
 import "./teamsResult.scss";
 
 
 
 class TeamsResult extends Component {
 	render() {
-		const { activeTeam1, activeTeam2, activeTeam1Name, activeTeam2Name, activeTeam1Image, activeTeam2Image, activeTeam1Timeline, activeTeam2Timeline } = this.props;
+		const { activeTeam1, activeTeam2, activeTeam1Name, activeTeam2Name, activeTeam1Image, activeTeam2Image, activeTeam1TimeLine, activeTeam2TimeLine } = this.props;
 
 		const graphLabels = ["DUI", "Assault","Disorderly conduct, sex", "Domestic violence", "Drugs", "Disorderly conduct", "Child abuse", "DUI, drugs", "Gun", "Obstruction", "Trespassing", "Other"];
 
@@ -39,8 +39,8 @@ class TeamsResult extends Component {
 				return foundCategory;
 			}
 		});
-		console.log(insertCatTeam1);
-		console.log(insertCatTeam2);
+
+		console.log(activeTeam1TimeLine);
 
 		// Map over data to return an array of numbers as strings
 		const teamData1String = insertCatTeam1.map((team) => {
@@ -55,84 +55,80 @@ class TeamsResult extends Component {
 		const teamData1 = teamData1String.map(Number);
 		const teamData2 = teamData2String.map(Number);
 
-		// const teamLabel2 = activeTeam2.map((team) => {
-		// 	return team.Category.toString();
-		// });
-
-		const data1 = {
+		const dataBothTeams = {
 			labels: graphLabels,
 			datasets: [
 				{
 					label: activeTeam1Name,
 					data: teamData1,
-					backgroundColor: "#f19670",
-
+					backgroundColor: "#001b59",
+					borderWidth: 5
 				},
 				{
 					label: activeTeam2Name,
 					data: teamData2,
-					backgroundColor: "#51574a"
-
+					backgroundColor: "#fcfdff",
+					borderWidth: 5
 				}
+] };
 
-]};
 
 
-		// const data2 = {
-		// 	datasets: [{
-		// 		data: teamData2,
-		// 		backgroundColor: ["#51574a", "#f19670","#a34974","#7c9fb0","#afc849","#c94a53","#f4ccdc","#297373","#e40066","#fe9000","#3960e0","#eac435","#e32f3b","#9163b6","#f4b243","#74c493", "#d6cbf4", "#4a5611"],
-		// 	}],
-		// 	labels: teamLabel2,
-		// };
-		// console.log(activeTeam1Timeline);
-		// console.log(activeTeam2Timeline);
 		return (
-			<div className="Search-Results">
-				<Grid divided= 'vertically'>
-					<Grid.Row columns = {2} padded>
-						<Grid.Column>
-							<img className="ActiveTeam1Image"src={activeTeam1Image}/>
-							<h1 className="ActiveTeam1Header">{activeTeam1Name}</h1>
-						</Grid.Column>
-						<Grid.Column>
-							<img className="ActiveTeam2Image"src={activeTeam2Image}/>
-							<h1 className="ActiveTeam2Header">{activeTeam2Name}</h1>
-						</Grid.Column>
-					</Grid.Row>
-					<Grid.Row >
-						<Grid.Column className="team1Column">
-							<Bar
-								data = { data1 }
-								width={1000}
-								height={500}
-								options={{
-									legend: {
-										position: 'top',
-									},
-									responsive: true,
-		        		maintainAspectRatio: false,
-								}}
-							/>
-						</Grid.Column>
-						{/* <Divider vertical>Or</Divider>
-						<Grid.Column>
-							<Radar
-								data = { data2 }
-								width={700}
-								height={350}
-								options={{
-									legend: {
-										position: 'left',
-									},
-									responsive: true,
-				        	maintainAspectRatio: false,
-								}}
-							/>
-						</Grid.Column> */}
-					</Grid.Row>
-				</Grid>
-			</div>
+			<Grid stackable divided= 'vertically'>
+				<Grid.Row columns = {2} padded>
+					<Grid.Column>
+						<img className="ActiveTeam1Image"src={activeTeam1Image}/>
+						<h1 className="ActiveTeam1Header">{activeTeam1Name}</h1>
+					</Grid.Column>
+					<Grid.Column>
+						<img className="ActiveTeam2Image"src={activeTeam2Image}/>
+						<h1 className="ActiveTeam2Header">{activeTeam2Name}</h1>
+					</Grid.Column>
+				</Grid.Row>
+				<Grid.Row >
+					<Grid.Column className="team1Column">
+						<h5 className="Stats-Years">***Based on NFL ARREST Statistics from the year 2000***</h5>
+						<Bar
+							data = { dataBothTeams }
+							width={700}
+							height={450}
+							options={{
+								legend: {
+									position: 'top',
+									labels: {
+										fontSize: 20,
+									}
+								},
+								showAllTooltips: true,
+								scales: {
+											 xAxes: [{
+													 ticks: {
+															 fontSize: 20,
+															 min: 0,
+	                              beginAtZero: true,
+	                              stepSize: 1,
+																autoSkip: false
+													 }
+											 }],
+											 yAxes: [{
+													ticks: {
+															fontSize: 20,
+															min: 0,
+															 beginAtZero: true,
+															 stepSize: 1,
+															 autoSkip: false
+													}
+											}]
+									 },
+									 responsive: true,
+		        			maintainAspectRatio: true,
+							}}
+						/>
+					</Grid.Column>
+				</Grid.Row>
+			</Grid>
+
 		);
 	}
 }
@@ -145,8 +141,8 @@ function mapStateToProps(state, props) {
 		activeTeam2Name: state.teams.activeteam2Name,
 		activeTeam1Image: state.teams.activeteam1ImageSource,
 		activeTeam2Image: state.teams.activeteam2ImageSource,
-		activeTeam1TimeLine: state.teams.activeteam1TimeLine,
-		activeTeam2TimeLine: state.teams.activeteam2TimeLine,
+		activeTeam1TimeLine: state.teams.activeteam1Timeline,
+		activeTeam2TimeLine: state.teams.activeteam2Timeline,
 	};
 }
 

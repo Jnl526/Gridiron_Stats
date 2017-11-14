@@ -9,7 +9,10 @@ You must be on a Node version greater than 6 to use this. Once you've npm
 installed, there are only two commands:
 
 * `npm run start` - Runs the development server (Specify port with PORT, default 3000)
-* `npm run build` - Builds the production version, which goes into `dist`
+* `npm run build` - Builds the production version, which goes into `dist`/
+
+#Deployment
+* http://gridironstatistics.herokuapp.com
 
 Once you start building things with this template, you may want to remove the
 `.placeholder` files in `src/assets/fonts`, `src/assets/images`, and
