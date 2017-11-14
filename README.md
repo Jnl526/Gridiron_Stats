@@ -19,7 +19,9 @@ Once you start building things with this template, you may want to remove the
 
 * http://gridironstatistics.herokuapp.com
 
-![Alt Text](https://media.giphy.com/media/3ohs7Kmj4PaV9HFvck/giphy.gif)
+<p style="text-align: center;">
+	<img src= "https://media.giphy.com/media/3ohs7Kmj4PaV9HFvck/giphy.gif" width="900">
+</p>
 
 ## React / Webpack Template
 
