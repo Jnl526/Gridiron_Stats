@@ -18,6 +18,7 @@ class Navigation extends Component {
 
 
 		return (
+
 			< Menu size='massive' className="Navigation" >
 				< Menu.Menu>
 					<Menu.Item position="left">

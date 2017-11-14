@@ -9,6 +9,16 @@
 	background-color: #527B99;
 }
 
+@font-face {
+  font-family: 'PROMESH Two';
+  src: url('/fonts/PROMESH-TwoFast;.ttf'),/* IE9 Compat Modes */
+       url('/fonts/PROMESH-TwoFast.ttf')  format('truetype')
+}
+
+.Menu {
+	background-color: #527B99;
+}
+
 .Nav {
 	text-align: center;
 	padding: 20px;
@@ -47,10 +57,10 @@ text-decoration: none;
 &.is-active,
 &:hover {
 	color: rgb(20,41,83);
-	;
+
 }
 
 &.is-active {
 	text-decoration: none;
-	}
+
 	}
